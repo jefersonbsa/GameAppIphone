@@ -284,8 +284,10 @@ Runtime:addEventListener( "system", onSystemEvent )
 -- Fim Ranking DB 
 --====================================================================--
 
-backgroundMusic = audio.loadSound("sound.mp3")
-backgroundMusicChannel = audio.play( backgroundMusic )  -- play the background music on channel 1, loop infinitely, and fadein over 5 seconds 
+backgroundMusic = audio.loadSound("smallwaterfall.mp3")
+backgroundMusicChannel = audio.play( backgroundMusic, {channel=1, loops =-1, fadein = 5000})  -- play the background music on channel 1, loop infinitely, and fadein over 5 seconds 
+
+
 function director:pause( )
 	audio.pause( backgroundMusicChannel )
 end

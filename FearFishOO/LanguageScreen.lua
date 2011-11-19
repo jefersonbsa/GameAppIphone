@@ -11,10 +11,10 @@ function new()
 	languageScreenBackground.xScale = 1.6
 	languageScreenBackground.yScale = 1.6
 	
-	local labelLanguageScreenRoundedRect = display.newRoundedRect( 10, 50, 300, 40, 8 )
+	local labelLanguageScreenRoundedRect = display.newRoundedRect( 30, 50, 270, 40, 8 )
 	labelLanguageScreenRoundedRect:setFillColor( 0, 0, 0, 170 )
 
-	local labelLanguageScreen = display.newText('Select Your Language :',40,55,'AmericanTypewriter-Bold',18)
+	local labelLanguageScreen = display.newText('Select Your Language :',60,55,'AmericanTypewriter-Bold',18)
 	
 	local selectPortugues = function ( event )
 		if event.phase == "release" then

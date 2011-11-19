@@ -3,6 +3,7 @@ module (..., package.seeall)
 function new()
 	local localGroup = display.newGroup()
 	local ui = require ( "ui" )
+	local language =  director:getLanguage()
 
 	local voltar = function ( event )
 		if event.phase == "release" then
@@ -40,7 +41,7 @@ function new()
 	local buttonFacil= ui.newButton{
 		default = "buttonGray.png",
 		over = "buttonBlue.png",
-		text = 'facil',
+		text = language.level1,
 		onEvent = facil,
 		id = "arrow"
 	}
@@ -49,7 +50,7 @@ function new()
 	local buttonMedim= ui.newButton{
 		default = "buttonGray.png",
 		over = "buttonBlue.png",
-		text = 'medium',
+		text = language.level2,
 		onEvent = medium,
 		id = "arrow"
 	}
@@ -58,7 +59,7 @@ function new()
 	local buttonDificil= ui.newButton{
 		default = "buttonGray.png",
 		over = "buttonBlue.png",
-		text = 'dificil',
+		text = language.level3,
 		onEvent = dificil,
 		id = "arrow"
 	}

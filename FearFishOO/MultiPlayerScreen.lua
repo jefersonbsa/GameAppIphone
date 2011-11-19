@@ -17,7 +17,7 @@ function new()
 
 	local voltar = function ( event )
 		if event.phase == "release" then
-			director:changeScene( "MenuScreen", "moveFromRight" )
+			director:changeScene( "MenuScreen", "moveFromLeft" )
 		end
 	end
 
@@ -27,10 +27,10 @@ function new()
 		end
 	end
 	
-	local labelScreenRoundedRect = display.newRoundedRect( display.contentWidth/3, 50, 180, 40, 8 )
+	local labelScreenRoundedRect = display.newRoundedRect( display.contentWidth/3 - 30, 50, 180, 40, 8 )
 	labelScreenRoundedRect:setFillColor( 0, 0, 0, 170 )
 
-	local labelScreen = display.newText(language.MultiPlayerOnline..':',display.contentWidth/3 - 30,55,'AmericanTypewriter-Bold',18)
+	local labelScreen = display.newText(language.MultiPlayerOnline..':',display.contentWidth/3 - 15 ,55,'AmericanTypewriter-Bold',18)
 	
 	local buttonStart = ui.newButton{
 		default = "buttonBlueSmall.png",
@@ -66,9 +66,9 @@ function new()
 	--sleep(2)
 	
 	if (#director:getPlayersOnline() == 0) then
-		local labelPlayerScreenRoundedRect = display.newRoundedRect( 50, 100 , 250,30,8 )
+		local labelPlayerScreenRoundedRect = display.newRoundedRect( 40, 100 , 250,30,8 )
 		labelPlayerScreenRoundedRect:setFillColor( 0, 0, 0, 170 )
-		local labelPlayerName = display.newText(language.InfoPlayerOnline,60,100,'AmericanTypewriter-Bold',18)		
+		local labelPlayerName = display.newText(language.InfoPlayerOnline,50,100,'AmericanTypewriter-Bold',18)		
 		
 		labelPlayerName:setTextColor( 100, 255, 255 )
 		localGroup:insert(labelPlayerScreenRoundedRect)	
@@ -77,7 +77,7 @@ function new()
 		for indice,jogador in ipairs(director:getPlayersOnline()) do
 			local labelPlayerScreenRoundedRect = display.newRoundedRect( 30, 100 + indice * 45, 270,30,8 )
 			labelPlayerScreenRoundedRect:setFillColor( 0, 0, 0, 170 )
-			local labelPlayerName = display.newText('Jogador : ' .. jogador.getPlayerName(),50,
+			local labelPlayerName = display.newText('Jogador : ' .. jogador.getPlayerName(),80,
 			100 + indice * 45,'AmericanTypewriter-Bold',15)		
 			localGroup:insert(labelPlayerScreenRoundedRect)
 			localGroup:insert(labelPlayerName)

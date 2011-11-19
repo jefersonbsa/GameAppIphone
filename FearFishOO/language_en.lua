@@ -14,5 +14,9 @@ language_en = {
 	RankingScore = "Score",
 	buttonPause = "Song",
 	buttonReset = "Reset",
-	InfoPlayerOnline = "There are no players Online"
+	InfoPlayerOnline = "There are no players Online",
+	level1 = "EASY",
+	level2 = "MEDIUM",
+	level3 = "HARD",
+	YouWin = "You Win!"
 }

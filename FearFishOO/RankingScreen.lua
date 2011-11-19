@@ -7,7 +7,7 @@ function new()
 
 	local voltar = function ( event )
 		if event.phase == "release" then
-			director:changeScene( "MenuScreen", "moveFromRight" )
+			director:changeScene( "MenuScreen", "moveFromLeft" )
 		end
 	end
 	
@@ -71,7 +71,7 @@ function new()
 	
 	
 	for indice1,jogador1 in ipairs(director:getRanking()) do
-			local labelPlayerScreenRoundedRect1 = display.newRoundedRect( 10, 100 + indice1 * 30, 130,25,8 )
+			local labelPlayerScreenRoundedRect1 = display.newRoundedRect( 10, 100 + indice1 * 32, 130,25,8 )
 			labelPlayerScreenRoundedRect1:setFillColor( 0, 0, 0, 170 )
 			
 			local labelPlayerName1 = display.newText(jogador1.getPlayerName(),20,
@@ -80,7 +80,7 @@ function new()
 			localGroup:insert(labelPlayerScreenRoundedRect1)
 			localGroup:insert(labelPlayerName1)
 			
-			local labelPlayerScreenRoundedRect1 = display.newRoundedRect( 145, 100 + indice1 * 30, 80,25,8 )
+			local labelPlayerScreenRoundedRect1 = display.newRoundedRect( 145, 100 + indice1 * 32, 80,25,8 )
 			labelPlayerScreenRoundedRect1:setFillColor( 0, 0, 0, 170 )
 			
 			local labelPlayerName1 = display.newText(jogador1.getPlayerPontos(),165,
@@ -89,7 +89,7 @@ function new()
 			localGroup:insert(labelPlayerScreenRoundedRect1)
 			localGroup:insert(labelPlayerName1)
 					
-			local labelPlayerScreenRoundedRect1 = display.newRoundedRect( 230, 100 + indice1 * 30, 75,25,8 )
+			local labelPlayerScreenRoundedRect1 = display.newRoundedRect( 230, 100 + indice1 * 32, 75,25,8 )
 			labelPlayerScreenRoundedRect1:setFillColor( 0, 0, 0, 170 )
 			
 			local labelPlayerName1 = display.newText(jogador1.getPlayerTime(),255,

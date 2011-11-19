@@ -31,7 +31,6 @@ local main = function ()
 end
 
 main()
---local translate = languageSetup.new()
 
 
 

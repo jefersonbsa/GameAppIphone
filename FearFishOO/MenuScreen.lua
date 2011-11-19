@@ -14,7 +14,7 @@ function new()
 	
 	local voltar = function ( event )
 		if event.phase == "release" then
-			director:changeScene( "LanguageScreen", "moveFromLeft" )
+			director:changeScene( "CreatePlayerScreen", "moveFromLeft" )
 		end
 	end
 	
